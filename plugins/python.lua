@@ -11,16 +11,16 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = function(_, opts)
-      -- opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "pyright", "ruff_lsp" })
-      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ruff_lsp" })
+      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "pyright", "ruff_lsp" })
+      -- opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ruff_lsp" })
     end,
   },
   {
     "jay-babu/mason-null-ls.nvim",
     opts = function(_, opts)
       -- need install pylint in virtualenv
-      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "black", "ruff" })
-      -- opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ruff" })
+      -- opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "black", "ruff" })
+      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "ruff" })
     end,
   },
   {
@@ -34,7 +34,7 @@ return {
       search_workspace = true,
       search = true,
       name = { "venv", ".venv" },
-      fd_binary_name = "fdfind",
+      fd_binary_name = "fd",
     },
     keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
   },
